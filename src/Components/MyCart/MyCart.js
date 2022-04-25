@@ -32,7 +32,8 @@ const MyCartComponent = () => {
       totalCost: totalCost
     }
     items.forEach((element) => {
-      checkoutResume.items +="\n" `${element.title} (x${element.qty}) -> ${element.price}
+      checkoutResume.items += `${element.title} (x${element.qty}) -> ${element.price}
+      \n
       ---------------------
       `
     })
