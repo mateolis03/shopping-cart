@@ -81,8 +81,8 @@ const SignupComponent = (props) => {
           "password": password
       },  
       {
-              "username": "laura22",
-              "password": "laura1"
+              "username": "luisfelipe1",
+              "password": "admin123"
           },
           {
               "username": "mateolis03",
