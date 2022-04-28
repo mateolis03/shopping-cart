@@ -11,12 +11,12 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const url = "https://carritodecompras-3e25c-default-rtdb.firebaseio.com/products.json"
+  const url = "https://carritodecompras-3e25c-default-rtdb.firebaseio.com/data.json"
   const products = await axios.get(url)
   
   return {
     props: {
-      products: products.data
+      products: products.data.products
     }
   }
 }

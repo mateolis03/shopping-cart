@@ -9,6 +9,7 @@ const LoginComponent = (props) => {
 
   const handleAuth = () => {
     if(username !== "" && password !== "") {
+      console.log(users);
       users && users.map((user, iteration) => {
         if(username === user.username && password === user.password) {
           var secret = 'shhhhhh';
@@ -17,7 +18,7 @@ const LoginComponent = (props) => {
           localStorage.setItem("auth", token)
           window.location.href = "/"
           
-        } else if((iteration === users.length-2) &&( username !== user.username || password !== user.password)) {
+        } else if((iteration === users.length) &&( username !== user.username || password !== user.password)) {
           Swal.fire("Oops!","Usuario o contraseña incorrecta :(", "error")
         }
       })

@@ -11,12 +11,12 @@ export default function SignupPage(props) {
 
 export async function getServerSideProps(context) {
   // Aquí se hace la petición, de esta forma el front no hace peticiones, todo queda del lado del servidor
-  const url =  "https://carritodecompras-3e25c-default-rtdb.firebaseio.com/users.json"
+  const url =  "https://carritodecompras-3e25c-default-rtdb.firebaseio.com/data.json"
   const users = await axios.get(url)
   
   return {
     props: {
-        users: users.data
+        users: users.data.users
     }
   }
 }
